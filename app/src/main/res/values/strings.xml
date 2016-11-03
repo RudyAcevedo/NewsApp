@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">News App</string>
+
+<!-- Error message when there is no internet connetion-->
+    <string name="no_internet_connection">no internet connection.</string>
+    
+    <!-- message when no news found-->
+    <string name="no_news">No news was found.</string>
+    
+    <string name="api_key">test</string>
+    
+    <!--Strings for order-by preference-->
+    <string name="settings_order_by_label">Order By</string>
+    <string name="settings_order_by_key" translatable="false">order_by</string>
+    <string name="settings_order_by_default" translatable="false">@string/settings_order_by_topic_value</string>
+
+    <!-- Label for order-by section option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_topic_label">Topic</string>
+    <string name="settings_order_by_topic_value" translatable="false">sectionName</string>
+
+    <!-- Label for order-by most recent option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_most_recent_label">Most Recent</string>
+    <string name="settings_order_by_most_recent_value" translatable="false">time</string>
+
+
+    <!-- Settings Menu Item [CHAR LIMIT=NONE] -->
+    <string name="settings_menu_item">Settings</string>
+    <!-- Settings Activity Title [CHAR LIMIT=NONE] -->
+    <string name="settings_title">News Settings</string>
+    <string name="settings_section_default" translatable="false"></string>
+    <string name="settings_section_label">Topic</string>
+    <string name="settings_section_key" translatable="false">section</string>
+
+    <string name="settings_news_key" translatable="false">section</string>
+    <string name="settings_news_default" translatable="false"></string>
+
+
+
+    <!-- Label for order-by section option [CHAR LIMIT=20] -->
+    <string name="settings_order_by_section_label">Topic</string>
+    <string name="settings_order_by_section_value" translatable="false">sectionName</string>
+
+
+
+</resources>
