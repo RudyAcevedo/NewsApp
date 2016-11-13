@@ -68,10 +68,10 @@ public class NewsActivity extends AppCompatActivity
                 // Get the {@link News} object at the given position the user clicked on
                 News currentNews = (News) mAdapter.getItem(position);
                 // Convert the String URL into a URI object (to pass into the Intent constructor)
-                Uri earthquakeUri = Uri.parse(currentNews.getURL());
+                Uri newsUri = Uri.parse(currentNews.getURL());
 
                 // Create a new intent to view the news URI
-                Intent websiteIntent = new Intent(Intent.ACTION_VIEW, earthquakeUri);
+                Intent websiteIntent = new Intent(Intent.ACTION_VIEW, newsUri);
 
                 // Send the intent to launch a new activity
                 startActivity(websiteIntent);

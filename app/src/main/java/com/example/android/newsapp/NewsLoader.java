@@ -21,6 +21,11 @@ public class NewsLoader extends AsyncTaskLoader<List<News>> {
     }
 
     @Override
+    protected void onStartLoading() {
+        forceLoad();
+    }
+
+    @Override
     public List<News> loadInBackground() {
         if (mUrl == null){
             return null;

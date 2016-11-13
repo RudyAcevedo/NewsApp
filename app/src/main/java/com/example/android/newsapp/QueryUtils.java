@@ -37,11 +37,7 @@ public final class QueryUtils {
     public static List<News> fetchNewsData(String requestUrl){
         //Create URL object
         URL url = null;
-        try {
-            Thread.sleep(2000);
-        }catch (InterruptedException e){
-            e.printStackTrace();
-        }
+
         try {
             url = createUrl(requestUrl);
         }catch (MalformedURLException e){
@@ -56,13 +52,13 @@ public final class QueryUtils {
             Log.e(LOG_TAG, "Problem making the HTTP request.", e);
         }
         //Extract relevant fields from teh JSON response and create a News object
-        List<News> news = extratFeatureFromJson(jsonResponse);
+        List<News> news = extractFeatureFromJson(jsonResponse);
 
         return news;
 
     }
 
-    public static List<News> extratFeatureFromJson(String newsJson){
+    public static List<News> extractFeatureFromJson(String newsJson){
 
         //return early if JSON string is empty or null
         if (TextUtils.isEmpty(newsJson)){
@@ -98,16 +94,16 @@ public final class QueryUtils {
                 String Url =ArrayObject.getString("webUrl").toString();
 
                 //Extract "date"
-                String publicaitonDate = ArrayObject.optString("webPublicaitonDate");
+                String pubicationDate = ArrayObject.optString("webPublicaitonDate");
 
-                StringBuilder formattedDate = new StringBuilder(publicaitonDate);
-                for (int j = 0; j < publicaitonDate.length(); j++){
-                    if (publicaitonDate.charAt(j) == 'T' || publicaitonDate.charAt(j)=='Z')
+                StringBuilder formattedDate = new StringBuilder(pubicationDate);
+                for (int j = 0; j < pubicationDate.length(); j++){
+                    if (pubicationDate.charAt(j) == 'T' || pubicationDate.charAt(j)=='Z')
                         formattedDate.setCharAt(j, ' ');
                 }
-                publicaitonDate = formattedDate.toString();
+                pubicationDate = formattedDate.toString();
 
-                News news = new News(section, title, publicaitonDate, Url);
+                News news = new News(section, title, pubicationDate, Url);
                 newsAdd.add(news);
 
             }
