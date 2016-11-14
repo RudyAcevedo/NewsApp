@@ -124,7 +124,7 @@ public class NewsActivity extends AppCompatActivity
         Uri.Builder uriBuilder = baseUri.buildUpon();
 
         uriBuilder.appendQueryParameter("format", "json");
-        uriBuilder.appendQueryParameter("q", section);
+        uriBuilder.appendQueryParameter("q", "league%AND%20of%AND%20legends");
         uriBuilder.appendQueryParameter("orderby", orderBy);
         uriBuilder.appendQueryParameter("api-key", getString(R.string.api_key));
 
